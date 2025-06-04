@@ -19,7 +19,7 @@ export class AppComponent {
     });
   }
 
-  toggleSidebar() {
+  alternarSidebar() {
     this.sidebarCollapsed = !this.sidebarCollapsed;
   }
 }
