@@ -1,4 +1,4 @@
-<app-header *ngIf="!isLoginPage" (toggleSidebar)="toggleSidebar()"></app-header>
+<app-header *ngIf="!isLoginPage" (alternarSidebar)="alternarSidebar()"></app-header>
 <div class="d-flex" [class.login-page]="isLoginPage">
   <app-sidebar *ngIf="!isLoginPage" [collapsed]="sidebarCollapsed"></app-sidebar>
   <div class="content flex-grow-1 p-4">

@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from 'src/app/models/user';
+import { Usuario } from 'src/app/models/usuario';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
 })
 export class LoginComponent {
-  user: User = { email: '', senha: '' };
-  errorMsg: string = '';
+  usuario: Usuario = { email: '', senha: '' };
+  mensagemErro: string = '';
 
   constructor(private router: Router) {}
 
-  login() {
+  entrar() {
     this.router.navigate(['/dashboard']);
   }
 }

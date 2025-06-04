@@ -1,13 +1,15 @@
 .sidebar {
   width: 220px;
   min-height: 100vh;
-  background: linear-gradient(180deg, #000851 0%, #1CB5E0 100%);
+  background: linear-gradient(180deg, var(--secondary-color) 0%, var(--primary-color) 100%);
   color: #fff;
   padding-top: 1rem;
+  transition: width 0.3s;
 }
 
 .sidebar.collapsed {
   width: 60px;
+  overflow: hidden;
 }
 
 .sidebar.collapsed .nav-link span {
@@ -27,4 +29,5 @@
 
 .sidebar .nav-link:hover {
   background: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
 }
