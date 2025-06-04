@@ -1,0 +1,16 @@
+.sidebar {
+  width: 220px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #000851 0%, #1CB5E0 100%);
+  color: #fff;
+  padding-top: 1rem;
+}
+
+.sidebar .nav-link {
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.sidebar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
