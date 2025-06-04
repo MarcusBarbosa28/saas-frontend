@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  cards = [
+    { title: 'Clientes', value: 120 },
+    { title: 'Vendas', value: 75 },
+    { title: 'Suporte', value: 5 }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
