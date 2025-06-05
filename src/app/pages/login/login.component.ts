@@ -31,7 +31,7 @@ export class LoginComponent {
 
   onSubmit() {
     this.auth.login(this.email, this.senha).subscribe({
-      next: () => this.router.navigate(['home']),
+      next: () => this.router.navigate(['/home']),
       error: () => alert('Email ou senha inválido.'),
     });
   }
