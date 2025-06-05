@@ -1,8 +1,31 @@
-<div class="login-wrapper">
-  <h2>Login</h2>
-  <form (ngSubmit)="onSubmit()">
-    <input type="email" placeholder="E-mail" [(ngModel)]="email" name="email" required />
-    <input type="password" placeholder="Senha" [(ngModel)]="senha" name="senha" required />
-    <button type="submit">Entrar</button>
-  </form>
+<div class="login-container">
+  <div class="login-card">
+    <img src="assets/logo/betech.png" alt="Logo da empresa" class="logo" />
+
+    <h2 class="title">Login</h2>
+
+    <form (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" [(ngModel)]="email" name="email" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Senha</mat-label>
+        <input matInput type="password" [(ngModel)]="senha" name="senha" required />
+      </mat-form-field>
+
+      <!-- <mat-checkbox color="primary">Lembrar-me</mat-checkbox> -->
+
+      <button mat-raised-button color="primary" class="login-button" type="submit">
+        Entrar
+      </button>
+
+      <a class="forgot-password" href="#">Esqueceu a senha?</a>
+    </form>
+
+    <div class="signup">
+      Novo aqui? <a href="#">Criar conta</a>
+    </div>
+  </div>
 </div>
