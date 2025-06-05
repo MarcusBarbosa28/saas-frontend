@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../../auth/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -24,12 +24,15 @@ export class LoginComponent {
   email = '';
   senha = '';
 
-  constructor(private auth: AuthService, private router: Router) {}
+  constructor(
+    private auth: AuthService,
+    private router: Router
+  ) { }
 
   onSubmit() {
     this.auth.login(this.email, this.senha).subscribe({
-      next: () => this.router.navigate(['/dashboard']),
-      error: () => alert('Login inválido'),
+      next: () => this.router.navigate(['home']),
+      error: () => alert('Email ou senha inválido.'),
     });
   }
 }

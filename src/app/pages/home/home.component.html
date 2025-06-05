@@ -1,0 +1,6 @@
+<div class="home-wrapper">
+  <h1>Bem-vindo, {{ usuario?.nome || 'Usuário' }}</h1>
+  <p>Email: {{ usuario?.email }}</p>
+
+  <button (click)="logout()">Sair</button>
+</div>

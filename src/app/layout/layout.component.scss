@@ -1,0 +1,46 @@
+.layout-container {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(to right, #1c2b36, #223843);
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #1b232b;
+  transition: width 0.3s ease;
+  color: white;
+  padding: 1rem;
+
+  &.collapsed {
+    width: 80px;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  .app-header {
+    height: 60px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .router-container {
+    padding: 1rem;
+    flex-grow: 1;
+    background: #263238;
+    color: white;
+  }
+}
